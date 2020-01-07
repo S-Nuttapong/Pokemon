@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gamja+Flower">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-light navbar-expand-md d-lg-flex justify-content-lg-start navbar navbar-expand-lg fixed-top"
+        id="mainNav" style="background-color: #30383a;">
+        <div class="container"><a id="link-btn" class="navbar-brand d-lg-flex justify-content-lg-start js-scroll-trigger"
+                href="#page-top">Who's that pokemon</a><button data-toggle="collapse"
+                class="navbar-toggler navbar-toggler-right" data-target="#navbarResponsive" type="button"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i
+                    class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a id="nav-link"
+                            class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a id="nav-link"
+                            class="nav-link js-scroll-trigger" href="#contact">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section
+        style="background-image: url(&quot;assets/img/Free-Pokemon-Background.jpg&quot;);padding: 0;padding-bottom: 0px;background-position: center;background-size: cover;height: 800px;padding-top: 0px;">
+        <div class="container-fluid border-white shadow-none d-flex d-sm-flex m-auto"
+            style="height: 787px;background-color: rgba(255,255,255,0);background-size: contain;background-position: center;margin: 0px;padding: -36px;">
+            <span class="mx-auto"
+                style="background-color: rgba(255,255,255,0);width: 500px;height: 150px;margin-left: 180px;color: rgba(38,104,109,0);font-size: 1rem;font-family: ABeeZee, sans-serif;margin-top: 450px;"><a
+                    id="link-btn" class="link-btn btn-primary text-left d-inline-flex justify-content-center align-items-center align-content-center mx-auto btn-xl rounded-pill mt-5"
+                    role="button" data-bs-hover-animate="pulse"
+                    style="width: 180px;height: 71px;margin-right: 375px;margin-left: 375px;padding-right: 40px;padding-left: 40px;margin-top: 0px;font-family: 'Gamja Flower', cursive;font-size: 20px;"
+                    href="#predict">Try now !</a><a
+                    id="link-btn" class="link-btn btn-primary d-inline-flex flex-row align-content-center btn-xl rounded-pill mt-5"
+                    role="button" data-bs-hover-animate="pulse" href="#about"
+                    style="width: 180px;height: 71px;margin-top: 0px;margin-left: 50px;padding-left: 50px;padding-right: 40px;font-family: 'Gamja Flower', cursive;font-size: 20px;padding-top: 20px;">Learnmore</a></span>
+        </div>
+    </section>
+    <section id="about" class="content-section text-center" style="background-color: #30383a;">
+        <div class="container">
+            <div class="row m-auto" style="margin-bottom: 100px;margin-top: -120px;">
+                <div class="col-lg-8 mx-auto">
+                    <h2>About Project</h2>
+                    <p>This is Pokémon image classification web application, using pretrained-model from&nbsp;<a
+                        href="https://www.kaggle.com/trolukovich/predicting-pokemon-with-cnn-and-kerasT">Trolukovich's kaggle notebook</a>. Model was trained
+                        on<br>&nbsp;<a href="https://www.kaggle.com/thedagger/pokemon-generation-one">Pokémon Generation One</a> dataset.
+                        At the moment, model&nbsp;are only capable of predicting 5 classes being Mewtwo, Pikachu, Charmander,
+                        Bulbasaur and Squirtle&nbsp;<br><a id="link-btn" class="link-btn" data-bs-hover-animate="flash"
+                            href="#predict" style="color: rgb(66,220,163);">Try now !</a></p>
+                    <ul class="list-inline banner-social-buttons"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="predict-section"
+        style="background-image: url(&quot;assets/img/poke_8.jpg&quot;);padding: 0;padding-bottom: 0px;background-position: center;background-size: cover;height: 800px;padding-top: 0px;">
+        <div class="container border-white shadow-none d-flex d-sm-flex m-auto" id="predict"
+            style="height: 800px;background-color: rgba(255,255,255,0);background-size: contain;background-position: center;margin: 0px;padding: 0px;">
+            <button id="upload" class="btn m-auto" data-bs-hover-animate="pulse" type="button"
+                style="width: 800px;height: 500px;background-color: rgba(255,255,255,0.7);font-size: 4rem;font-family: 'Gamja Flower', cursive;color: #00667f;">Drop
+                your Pokemons !</button>
+            <input id="submit-image" type="file" accept="image/*" required="" onchange="Preprocess(this.files)" />
+            <div class="card2">
+                <img class="display-image" src=""> <!-- placeholder for displaying images uploaded from users -->
+                <div role="group" class="btn-group" style="width: 800px;height: 60px;margin-top: 0px;">
+                    <button class="btn btn-primary" id="go-back" type="button"
+                        style="color: white;width: 300px;font-family: 'Gamja Flower';font-size: 2rem;border-radius: 1rem;border: 1px dashed black;"
+                        data-bs-hover-animate="pulse">Go Back</button>
+                    <button class="btn btn-primary" id="detect-image" type="button"
+                        style="color: white;width: 500px;font-family: 'Gamja Flower';font-size: 2rem;border-radius: 1rem;border: 1px dashed black;"
+                        data-bs-hover-animate="pulse">Upload and Detect Pokémon</button>
+                </div>
+            </div>
+            <div class='card3'>
+                <img class='loading-screen' src="assets/img/loadingscreen/screen_1.gif">
+            </div>
+            <div class='card5 dt-card'>
+                <div class='card4 dt-card' id="stat-table">
+                </div>
+                <button class="btn btn-primary" id="go-back-2" type="button"
+                    style="color: white;width: 100%;font-family: 'Gamja Flower';font-size: 2rem;border-radius: 1rem;border: 1px dashed black;"
+                    data-bs-hover-animate="pulse">Go Back</button>
+            </div>
+        </div>
+    </section>
+    <section class="d-xl-flex align-items-xl-center content-section text-center" id="contact"
+        style="background-color: #30383a;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Contact&nbsp;</h2>
+                    <p>This project can be found&nbsp;<a
+                            href="https://github.com/S-Nuttapong/Flask-Pokemon-Classification-API">here</a>. Feel free to clone,
+                        fork, make change or contribute to project however you please. In addition, if you need help
+                        regarding this
+                        project, feel free to reach out to me.</p>
+                    <ul class="list-inline banner-social-buttons">
+                        <li class="list-inline-item">&nbsp;<a class="btn btn-primary btn-lg btn-default" role="button"
+                                href="https://www.linkedin.com/in/nuttapong-saelek-57a972192/"><i
+                                    class="fa fa-linkedin-square fa-fw"></i><span class="network-name">&nbsp;
+                                    Linkedin</span></a></li>
+                        <li class="list-inline-item">&nbsp;<a class="btn btn-primary btn-lg btn-default" role="button"
+                                href="https://medium.com/@nuttapong_s"><i class="fa fa-medium fa-fw"></i><span
+                                    class="network-name">&nbsp;medium</span></a></li>
+                        <li class="list-inline-item">&nbsp;<a class="btn btn-primary btn-lg btn-default" role="button"
+                                href="https://github.com/S-Nuttapong"><i class="fa fa-github fa-fw"></i><span
+                                    class="network-name">&nbsp;github</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="map-clean"></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/js/grayscale.js"></script>
+    <script src="assets/js/firstview.js" ></script>
+    <script src="assets/js/droppreview.js"></script>
+</body>
+
+</html>
